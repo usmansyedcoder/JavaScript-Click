@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    body{
+        background-color: yellow;
+    }  
+        h1 {
+            color: red;
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 34px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text"></h1>
+    
+    
+    <script>
+        
+        function getCurrentTime() {
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+            return hours + ":" + minutes + ":" + seconds;
+        }
+
+        document.onclick = (e) => {
+            let x = e.clientX;
+            let y = e.clientY;
+            document.querySelector(".text").textContent = "X = " + x + ", Y = " + y + " & Time is : " + getCurrentTime();
+        }
+    </script>
+</body>
+
+</html>
